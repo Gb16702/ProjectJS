@@ -1,0 +1,57 @@
+.nav {
+    height: 14vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    // border-bottom: 1px solid #f0db4f;
+}
+ul {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+ul:first-child {
+    width: 43%;
+    justify-content: space-around;
+}
+ul:last-child {
+    justify-content: center;
+}
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+}
+.login {
+padding: 11px;
+color: #f0db4f;
+}
+.loginLiGroup {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #f0db4f;
+}
+
+.userIcon {
+    margin-left: 9px;
+    color: #f0db4f;
+}
+.userIcon2 {
+    display: none !important;
+    margin-left: 9px;
+    color: #f0db4f;
+}
+.loginLiGroup:hover .userIcon {
+    display: none;
+}
+.loginLiGroup:hover .userIcon2 {
+    display: block !important;
+}

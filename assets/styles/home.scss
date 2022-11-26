@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+html, body {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.homeTopBloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 70vh;
+    background-color: white;
+    margin-right: 0px;
+}
+.homeTopBlocG {
+    display: flex;
+    background-color: #1a1a1a;
+    width: 60%;
+    min-height: 70vh;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 50px 60px 80px 60px;
+}
+.homeTopBlocD {
+    display: flex;
+    width: 40%;
+    background-color: #1a1a1a;
+    min-height: 70vh;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 90px 50px 60px;
+    font-family: 'Anek Devanagari', sans-serif;
+
+}
+.blocTransition {
+    height: 30vh;
+    background-color: white;
+}
+.blocGrille {
+height: 50vh;
+padding: 20px;
+background-color: green;
+}
+.blocSousGrille {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.rowGroup {
+    background-color: blue;
+    height: 100%;
+    width: calc(100% / 3);
+}
+.welcomeTitle {
+    margin-left: 30px;
+    font-size: 60pt;
+    height: fit-content;
+    font-family: 'Anek Devanagari', sans-serif;
+    line-height: 48pt;
+}
+.welcomeTitle span {
+    color: #f0db4f;
+    text-shadow:
+    0 0 2px #1a1a1a,
+    1px 1px #1a1a1a,
+    2px 2px #1a1a1a,
+    2px 2px 0 ,
+    3px 3px 0 #e1e1e1,
+    4px 4px 0 #e1e1e1,
+    5px 5px 0 rgba(255, 255, 255, 1),
+    ;
+}
+
+
+
+span yellow {
+    font-size: 0;
+    margin-left: 8px;
+    letter-spacing: 1px;
+    color: #f0db4f;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: perspective(100);
+    text-shadow:
+    0 0 2px #1a1a1a,
+    1px 1px #1a1a1a,
+    2px 2px #1a1a1a,
+    2px 2px 0 ,
+    3px 3px 0 #e1e1e1,
+    4px 4px 0 #e1e1e1,
+    5px 5px 0 rgba(255, 255, 255, 1),
+    ;
+}
+span yellow.anim{
+    animation: anim 1s ease;
+    transition: all 1s ease;
+}
+span yellow.opacity {
+    animation: opacity 1s ease;
+}
+@keyframes opacity {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes anim {
+    from{
+        transform: rotate(180deg) translate(30px, -30px);
+        transform-origin: left;
+        transform-style:preserve-3d;
+    }
+    50% {
+        font-size: 70px;
+    }
+    to {
+        font-size: 80px;
+    }
+}
+
+.description {
+font-size: 16px;
+}
+.linkGroup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: row;
+}
+.linkGroup {
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.linkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0db4f;
+    transition: all .3s;
+    position: relative;
+    width: 140px;
+    height: 40px;
+}
+.linkContainer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #1a1a1a;
+    width: 130px;
+    transform: translateY(2px);
+}
+.iconContainer {
+    position: relative;
+    width: 0;
+    transition: all .3s;
+}
+
+.arrow {
+    color: #1a1a1a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 3s;
+    display: none;
+}
+.linkContainer:hover .iconContainer {
+    width: 30px;
+}
+.linkContainer:hover .arrow {
+    display: block;
+}
+.welcomeMessageContainer {
+    position: relative;
+    margin-left: 30px;
+}
+.welcomeMessage {
+    left: -100vw;
+    transition: all .5s;
+    font-size: 18px;
+    position: absolute;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+.welcomeMessage.translated {
+    left: 0;
+}

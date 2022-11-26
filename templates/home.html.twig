@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Accueil
+{% endblock %}
+{% block body %}
+    {% include "partials/header.html.twig" %}
+
+<div class="homeTopBloc">
+    <div class="homeTopBlocG">
+        <h1 class = 'welcomeTitle'>Bienvenue sur <br> <span>Project. <yellow>JS</yellow> </span></h1>
+        <div class="welcomeMessageContainer">
+            <h4 class = 'welcomeMessage'>Le site qui répertorie mes projets d'examen de Javascript</h4>
+        </div>
+    </div>
+    <div class="homeTopBlocD">
+        <h3 class = "description">Ce site contient différents projets que j'ai réalisé pour mon examen de Javascript le 24-11-2022. <br>Vous pourrez y trouver des projets tels qu'un Memory, un Parallax, une Lotterie, ...
+        </h3>
+        <div class="linkGroup">
+            <div class="linkContainer">
+            <a href="#transition">Naviguer</a>
+                <div class="iconContainer">
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="linkContainer">
+            <a href="">Voir les projets</a>
+            <div class="iconContainer">
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blocTransition" id = "transition">
+
+</div>
+<div class="blocGrille">
+    <div class="blocSousGrille">
+        <div class="rowGroup"></div>
+        <div class="rowGroup"></div>
+        <div class="rowGroup"></div>
+    </div>
+</div>
+
+{{encore_entry_link_tags('home')}}
+
+{% endblock %}
