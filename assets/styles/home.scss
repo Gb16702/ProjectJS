@@ -7,6 +7,11 @@
     color: white;
 }
 
+::selection {
+    background-color: #1a1a1a;
+    color: #f0db4f;
+}
+
 html, body {
     background-color: #1a1a1a;
     min-height: 100vh;
@@ -21,6 +26,7 @@ html, body {
     min-height: 70vh;
     background-color: white;
     margin-right: 0px;
+    user-select: none;
 }
 .homeTopBlocG {
     display: flex;
@@ -45,24 +51,34 @@ html, body {
 .blocTransition {
     height: 30vh;
     background-color: white;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 .blocGrille {
 height: 50vh;
 padding: 20px;
-background-color: green;
+background-color: #1a1a1a;
+transition: .6s;
+}
+.blocGrille.extended {
+    height: 60vh;
 }
 .blocSousGrille {
     background-color: white;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .rowGroup {
-    background-color: blue;
+    background-color: #1a1a1a;
+    border: 1px solid #f0db4f;
     height: 100%;
-    width: calc(100% / 3);
 }
 .welcomeTitle {
     margin-left: 30px;
@@ -106,10 +122,21 @@ span yellow {
 }
 span yellow.anim{
     animation: anim 1s ease;
-    transition: all 1s ease;
+    transition: all 1s linear;
 }
 span yellow.opacity {
     animation: opacity 1s ease;
+}
+span yellow.transform {
+    animation: transform .4s ease
+}
+
+@keyframes transform {
+    0%, 100% {
+        transform: scale(1);
+    }50% {
+        transform: scale(1.1, .9);
+    }
 }
 @keyframes opacity {
     from {
@@ -167,7 +194,7 @@ font-size: 16px;
     height: 40px;
     color: #1a1a1a;
     width: 130px;
-    transform: translateY(2px);
+    font-family: 'Anek Devanagari', sans-serif;
 }
 .iconContainer {
     position: relative;
@@ -203,4 +230,40 @@ font-size: 16px;
 }
 .welcomeMessage.translated {
     left: 0;
+}
+.lastProjects {
+    color: #1a1a1a;
+    font-family: 'Anek Devanagari', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    font-size: 28px;
+}
+
+.rowGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.rowTop {
+    background-color: blue;
+}
+.rowMid {
+    background-color: red;
+}
+.rowBot {
+    background-color: green;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    transition: all .3s ease;
+
+    i{
+        font-size: 30px;
+    }
+    .arrow-slide-up {
+        display: none;
+    }
 }

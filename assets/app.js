@@ -6,11 +6,17 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+//! SASS
 import './styles/app.scss';
 import './styles/home.scss';
+import './styles/home.scss';
+
 import './styles/partials/header.scss';
 
+//! JS
 import './js/home.js';
+import './js/navBar.js';
 
 // start the Stimulus application
 import './bootstrap';
+

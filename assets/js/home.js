@@ -25,3 +25,28 @@ window.onload = () => {
         message.classList.add('translated')
     }
 }
+
+yellow.onclick = () => {
+    setTimeout(() => {
+        yellow.classList.add('transform')
+    }, 0)
+    yellow.classList.remove('transform')
+}
+let arrowSlideBottom = document.querySelector('.arrow-slide')
+let arrowSlideTop = document.querySelector('.arrow-slide-up')
+let grid = document.querySelector('.blocGrille')
+
+
+arrowSlideBottom.onclick = () => {
+    grid.classList.add('extended')
+    arrowSlideBottom.style.display = "none"
+    arrowSlideTop.style.display = 'flex'
+}
+
+arrowSlideTop.onclick = () => {
+    grid.classList.remove('extended')
+    arrowSlideBottom.style.display = 'flex'
+    arrowSlideTop.style.display = 'none'
+}
+
+

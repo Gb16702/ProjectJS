@@ -14,10 +14,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 //! création home page
 class HomeController extends AbstractController {
-    #[Route('/home', 'home', methods: ['GET'])]
+    #[Route('/accueil', 'home', methods: ['GET'])]
     public function index(): Response {
         return $this->render('home.html.twig', [
-            
+
         ]);
     }
 
