@@ -20,7 +20,8 @@
         "symfony/security-bundle": "6.1.*",
         "symfony/twig-bundle": "6.1.*",
         "symfony/webpack-encore-bundle": "^1.16",
-        "symfony/yaml": "6.1.*"
+        "symfony/yaml": "6.1.*",
+        "vich/uploader-bundle": "^2.0"
     },
     "config": {
         "allow-plugins": {
@@ -78,6 +79,7 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "fzaninotto/faker": "^1.5",
-        "symfony/maker-bundle": "^1.48"
+        "symfony/maker-bundle": "^1.48",
+        "symfony/var-dumper": "6.1.*"
     }
 }

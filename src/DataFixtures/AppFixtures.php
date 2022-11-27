@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Projects;
 use Faker\Factory;
 use App\Entity\User;
 use DateTimeImmutable;
@@ -47,6 +48,17 @@ class AppFixtures extends Fixture
         ->setCreatedAt($createdAt);
         $manager -> persist($user);
 
+        $projet = new Projects();
+        $createAt = $faker->dateTimeBetween('-6 months', "-4 months");
+        $createdAt = new DateTimeImmutable($createAt->format('Y-m-d'));
+
+        $projet -> setName('Test')
+        ->setCreatedAt($createdAt);
+
+
+        $manager -> persist($projet);
+
         $manager->flush();
     }
+
 }

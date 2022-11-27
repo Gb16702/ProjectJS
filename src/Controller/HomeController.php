@@ -3,11 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Repository\MarquesRepository;
-use App\Repository\PartialsRepository;
+
+use App\Repository\ProjectsRepository;
 use App\Repository\UserRepository;
-use App\Repository\VoituresRepository;
-use App\Repository\ImagesVoituresRepository;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,8 +14,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 //! création home page
 class HomeController extends AbstractController {
     #[Route('/accueil', 'home', methods: ['GET'])]
-    public function index(): Response {
+    public function index(UserRepository $userR, ProjectsRepository $projectsR): Response {
         return $this->render('home.html.twig', [
+            'user' => $userR-> findAll(),
+            'projects' => $projectsR -> findAll()
 
         ]);
     }

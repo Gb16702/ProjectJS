@@ -38,6 +38,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
     public function getEmail(): ?string
     {
         return $this->email;
@@ -115,15 +127,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getUsername(): ?string
-    {
-        return $this->username;
-    }
 
-    public function setUsername(string $username): self
-    {
-        $this->username = $username;
-
-        return $this;
-    }
 }

@@ -12,6 +12,7 @@ class ProjectsCrudController extends AbstractCrudController
         return Projects::class;
     }
 
+
     /*
     public function configureFields(string $pageName): iterable
     {

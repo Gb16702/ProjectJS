@@ -30,8 +30,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('User', "fa-solid fa-file-export", User::class);
         yield MenuItem::linkToCrud('Projects', "fa-solid fa-file-export", Projects::class);
-        yield MenuItem::linktoRoute('Back to the website', 'fa-solid fa-rotate-left', 'home',);
-
+        yield MenuItem::linktoRoute('Back to the website', 'fa-solid fa-rotate-left', 'home');
 
     }
 }

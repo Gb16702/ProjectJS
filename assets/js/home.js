@@ -1,6 +1,7 @@
 const yellow = document.querySelector('yellow')
 const message = document.querySelector('.welcomeMessage')
 
+
 window.onload = () => {
     console.log('Page Home');
     yellow.style.setProperty('opacity', '.2')
@@ -35,7 +36,6 @@ yellow.onclick = () => {
 let arrowSlideBottom = document.querySelector('.arrow-slide')
 let arrowSlideTop = document.querySelector('.arrow-slide-up')
 let grid = document.querySelector('.blocGrille')
-
 
 arrowSlideBottom.onclick = () => {
     grid.classList.add('extended')
