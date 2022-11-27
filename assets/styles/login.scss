@@ -1,0 +1,141 @@
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 530px;
+    width: 390px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    border: 2px solid #f0db4f;
+    border-radius: 3px;
+}
+form {
+    height: calc(100vh - 110.1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    min-height: 100vh;
+}
+
+li a {
+    transition: .4s;
+}
+li a:hover {
+    color: #f0db4f;;
+}
+.loginTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    position: relative;
+    .pic{
+        color: #f0db4f;
+        position: absolute;
+        top: -100%;
+        width: 180px;
+        height: 180px;
+        font-size: 50pt;
+        background-color: #f0db4f;
+        border-radius: 50%;
+        border: 20px solid #1a1a1a;
+
+        i {
+            position: absolute;
+            color: #1a1a1a;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.loginMid {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+}
+.loginBot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+}
+.botTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+
+    button {
+    background-color: #f0db4f;
+    color: #1a1a1a;
+    width: 65%;
+    height: 100%;
+    font-weight: bold;
+    transition: .4s;
+    }
+}
+.botBot {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+
+    h4 {
+        font-size: 11px;
+    }
+}
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 60%;
+    height: 40px;
+    transition: .3s ease;
+}
+
+.form-group input {
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    transition: .4s;
+    font-size: 17px;
+}
+
+input:focus {
+    border-bottom: 2px solid #f0db4f;
+}
+input:focus ~ label {
+    color: #f0db4f;
+}
+input:valid~ label {
+    top: 0;
+    font-size: 11px;
+}
+
+label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    transition: .3s;
+    font-size: 14px;
+}
+
+button:hover {
+    filter: brightness(1.3);
+}
+

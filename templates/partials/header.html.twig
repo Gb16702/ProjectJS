@@ -3,15 +3,28 @@
 {% block body %}
 <nav class = 'nav'>
     <ul>
-        <li><a class = 'navLink' href="">Accueil</a></li>
+        <li><a class = 'navLink' href="{{path('home')}}">Accueil</a></li>
         <li><a class = 'navLink' href="">Projets</a></li>
         <li><a class = 'navLink' href="">Membres</a></li>
+
+
+        {% if app.user %}
+        <li><a class = 'navLink' href="{{path('app_logout')}}">Déconnexion</a></li>
+        {% endif %}
     </ul>
-    <ul>
+    <ul class = "rightUl">
+         {% if app.user and is_granted('ROLE_ADMIN') %}
+        <li><a class = 'navLink' href="{{path('admin')}}">Admininistration</a></li>
+        {% endif %}
     <div class="loginLiGroup">
         <i class="fa-regular fa-user userIcon"></i>
         <i class="fa-solid fa-user userIcon2"></i>
-        <li class = "login"><a href=""></a>Connexion</li>
+        {% if app.user %}
+        <li class = "login"><a href= "#">Mon Profil</a></li>
+        {% else %}
+
+        <li class = "login"><a href='{{path('app_login')}}'>Connexion</a></li>
+        {% endif %}
 
     </div>
     </ul>

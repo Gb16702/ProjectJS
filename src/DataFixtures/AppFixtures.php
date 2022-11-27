@@ -35,8 +35,18 @@ class AppFixtures extends Fixture
         ->setRoles(['ROLE_ADMIN'])
         ->setCreatedAt($createdAt);
 
-
         $manager -> persist($admin);
+
+        $user = new User();
+        $hash = $this ->hasher -> hashPassword($user, 'Test');
+        $createAt = $faker->dateTimeBetween('-6 months', "-4 months");
+        $createdAt = new DateTimeImmutable($createAt->format('Y-m-d'));
+        $user -> setUsername('Test')
+        ->setEmail('test@gmail.com')
+        ->setPassword($hash)
+        ->setCreatedAt($createdAt);
+        $manager -> persist($user);
+
         $manager->flush();
     }
 }
