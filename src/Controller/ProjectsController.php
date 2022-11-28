@@ -13,7 +13,7 @@ class ProjectsController extends AbstractController
     #[Route('/projets', name: 'projets')]
     public function index(ProjectsRepository $projects): Response
     {
-        return $this->render('projects/index.html.twig', [
+        return $this->render('projets/projets.html.twig', [
             'projets' => $projects -> findAll()
         ]);
     }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 
+use App\Repository\ImagesProjectsRepository;
 use App\Repository\ProjectsRepository;
 use App\Repository\UserRepository;
 
@@ -14,10 +15,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 //! création home page
 class HomeController extends AbstractController {
     #[Route('/accueil', 'home', methods: ['GET'])]
-    public function index(UserRepository $userR, ProjectsRepository $projectsR): Response {
+    public function index(UserRepository $userR, ProjectsRepository $projectsR, ImagesProjectsRepository $images): Response {
         return $this->render('home.html.twig', [
             'user' => $userR-> findAll(),
-            'projects' => $projectsR -> findAll()
+            'projects' => $projectsR -> findAll(),
+            'images' => $images -> findAll()
 
         ]);
     }

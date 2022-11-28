@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Projets
+{% endblock %}
+
+{% block body %}
+    {% include "partials/header.html.twig" %}
+    <div class="recentContainer">
+        <div class="recent">Mon projet le plus récent</div>
+    </div>
+    {% for projet in projets %}
+
+   {% if loop.first %}
+    <div class="Last">
+        ok
+    </div>
+    {% else %}
+        okkds
+   {% endif %}
+
+
+
+
+
+
+    {{projet.imagesProjects | length}}
+     <div class="projet" style = "background-image: url({{ vich_uploader_asset(projet.imagesProjects[0], 'imageFile') }}); background-size: cover; background-position: center"></div>
+
+    {% endfor %}
+{{encore_entry_script_tags('nav')}}
+{{encore_entry_link_tags('projets')}}
+{% endblock %}
