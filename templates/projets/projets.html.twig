@@ -4,29 +4,36 @@
 {% endblock %}
 
 {% block body %}
+    {{encore_entry_link_tags('projets')}}
     {% include "partials/header.html.twig" %}
     <div class="recentContainer">
         <div class="recent">Mon projet le plus récent</div>
     </div>
+    <div class="englober">
     {% for projet in projets %}
-
    {% if loop.first %}
-    <div class="Last">
-        ok
+
+
+    <div class="Last" >
+        <div class="lastGrid">
+            <div class="rowGrid" style = 'background-image: url({{vich_uploader_asset(projet.imagesProjects[0], 'imageFile')}})'></div>
+            <div class="rowGrid" style = 'background-image: url({{vich_uploader_asset(projet.imagesProjects[0], 'imageFile')}})'></div>
+            <div class="rowGrid" style = 'background-image: url({{vich_uploader_asset(projet.imagesProjects[0], 'imageFile')}})'></div>
+        </div>
+    </div>
+    <div class="lastTitleContainer">
+    <div class="lastVisible">
+        <div class="lastTitle">{{projet.name}}</div>
+        <div class="lastDate"><pre>
+    </div>
     </div>
     {% else %}
         okkds
    {% endif %}
-
-
-
-
-
-
     {{projet.imagesProjects | length}}
      <div class="projet" style = "background-image: url({{ vich_uploader_asset(projet.imagesProjects[0], 'imageFile') }}); background-size: cover; background-position: center"></div>
 
     {% endfor %}
+</div>
 {{encore_entry_script_tags('nav')}}
-{{encore_entry_link_tags('projets')}}
 {% endblock %}

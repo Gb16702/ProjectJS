@@ -7,3 +7,41 @@
         font-size: 26px;
     }
 }
+
+.Last {
+    height: 45vh;
+    background: red;
+    width: 100%;
+}
+.rowGrid {
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid #333;
+}
+.englober {
+    padding: 0 6%;
+}
+.lastTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-bottom: 10px solid #f0db4f;
+    height: 90px;
+    width: 100%;
+}
+.lastGrid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1Fr);
+    width: 100%;
+    height: 100%;
+}
+.lastVisible {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
